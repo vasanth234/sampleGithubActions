@@ -3,10 +3,20 @@ name: hello world
 on: workflow_dispatch
 
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: hello step
-        run: |
-          echo "this is hello world"
-          echo "this is very important program"
+      - name: build app
+        run: echo "build app"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test app
+        run: echo "test app"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy app
+        run: echo "deploy app"
